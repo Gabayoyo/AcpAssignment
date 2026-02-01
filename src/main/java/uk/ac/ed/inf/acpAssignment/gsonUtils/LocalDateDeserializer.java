@@ -1,4 +1,4 @@
-package uk.ac.ed.inf.acpTutorial.gsonUtils;
+package uk.ac.ed.inf.acpAssignment.gsonUtils;
 
 import com.google.gson.*;
 

@@ -1,4 +1,4 @@
-package uk.ac.ed.inf.acpTutorial;
+package uk.ac.ed.inf.acpAssignment;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

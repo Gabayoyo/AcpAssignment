@@ -1,4 +1,4 @@
-package uk.ac.ed.inf.acpTutorial.dto;
+package uk.ac.ed.inf.acpAssignment.dto;
 
 /**
  * defines a point using longitude @lng and latitude @lat

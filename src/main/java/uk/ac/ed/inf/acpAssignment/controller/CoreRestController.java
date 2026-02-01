@@ -1,19 +1,15 @@
-package uk.ac.ed.inf.acpTutorial.controller;
+package uk.ac.ed.inf.acpAssignment.controller;
 
 import com.google.gson.Gson;
-import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.env.Environment;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import uk.ac.ed.inf.acpTutorial.configuration.SystemEnvironment;
-import uk.ac.ed.inf.acpTutorial.dto.Restaurant;
-import uk.ac.ed.inf.acpTutorial.dto.Tuple;
+import uk.ac.ed.inf.acpAssignment.configuration.SystemEnvironment;
+import uk.ac.ed.inf.acpAssignment.dto.Restaurant;
+import uk.ac.ed.inf.acpAssignment.dto.Tuple;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.List;
 import java.util.Objects;
 
 @RestController()
