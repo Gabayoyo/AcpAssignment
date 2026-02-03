@@ -3,6 +3,7 @@ package uk.ac.ed.inf.acpAssignment.configuration;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import software.amazon.awssdk.regions.Region;
 
 @Configuration
 public class SystemEnvironment {
@@ -14,4 +15,11 @@ public class SystemEnvironment {
     public String getIlpServiceEndpoint(){
         return ilpServiceEndpoint;
     }
+
+    public static final String AWS_USER = "test";
+    public String getAwsUser() { return AWS_USER; }
+
+    public static final Region AWS_REGION = Region.US_EAST_1;
+
+
 }
