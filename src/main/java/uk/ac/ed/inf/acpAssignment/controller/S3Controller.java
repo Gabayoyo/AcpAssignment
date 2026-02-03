@@ -1,7 +1,13 @@
 package uk.ac.ed.inf.acpAssignment.controller;
+import java.net.URL;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
-import software.amazon.awssdk.regions.Region;
+import software.amazon.awssdk.core.ResponseInputStream;
+import software.amazon.awssdk.services.s3.model.GetObjectRequest;
+import software.amazon.awssdk.services.s3.model.GetObjectResponse;
+import software.amazon.awssdk.services.s3.model.PutObjectRequest;
+import software.amazon.awssdk.services.s3.model.PutObjectResponse;
+import java.nio.file.Paths;
 import software.amazon.awssdk.services.s3.S3Client;
 import java.net.URI;
 import static uk.ac.ed.inf.acpAssignment.configuration.SystemEnvironment.ACCESS_KEY;
@@ -16,4 +22,18 @@ public class S3Controller {
           AwsBasicCredentials.create(ACCESS_KEY, SECRET_KEY)))
       .region(AWS_REGION)
       .build();
+
+  String bucketName = "s2417814";
+
+  public void fillBucket(String objectKey, URL url) {
+    PutObjectRequest putObjectRequest = PutObjectRequest.builder()
+        .bucket(bucketName)
+        .key(objectKey)
+        .build();
+
+    PutObjectResponse putObjectResponse = s3Client.putObject(putObjectRequest,
+        Paths.get("src/main/resources/" + objectKey));
+  }
+
+
 }
