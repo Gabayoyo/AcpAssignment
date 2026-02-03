@@ -20,6 +20,7 @@ public class SystemEnvironment {
     public String getAwsUser() { return AWS_USER; }
 
     public static final Region AWS_REGION = Region.US_EAST_1;
-
+    public static final String ACCESS_KEY = "test";
+    public static final String SECRET_KEY = "test";
 
 }
