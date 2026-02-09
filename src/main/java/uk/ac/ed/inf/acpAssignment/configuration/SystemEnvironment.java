@@ -17,10 +17,18 @@ public class SystemEnvironment {
     }
 
     public static final String AWS_USER = "test";
-    public String getAwsUser() { return AWS_USER; }
+    public String getAwsUser() {
+        return AWS_USER;
+    }
+
+    public static final String AWS_SECRET = "test";
+    public String getAwsSecret() {
+        return AWS_SECRET;
+    }
 
     public static final Region AWS_REGION = Region.US_EAST_1;
-    public static final String ACCESS_KEY = "test";
-    public static final String SECRET_KEY = "test";
+    public Region getAwsRegion() {
+        return AWS_REGION;
+    }
 
 }
